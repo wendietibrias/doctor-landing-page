@@ -1,0 +1,132 @@
+.service-section {
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 0 7rem;
+    position:relative;
+}
+
+.service-section--header {
+    width:75%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.service-section--header h3{
+    width:max-content;
+    margin:0 auto;
+    font-size:1.7rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.service-section--header h3::after {
+    content:'';
+    position:absolute;
+    bottom:-17px;
+    width:50%;
+    height:2px;
+    background-color: var(--title-color);
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.service-section--header p {
+    font-size:0.95rem;
+    margin-top:2.5rem;
+    color:var(--subtitle-color);
+    line-height: 1.4rem;
+}
+
+
+.service-section--items {
+   display:grid;
+   margin-top:4rem;
+   grid-template-columns: repeat(3,1fr);
+   gap:1.5rem 2rem;
+}
+
+.service-section--items .item {
+    width:100%;
+    border-radius: 6px;
+    padding:2.5rem 3rem 2.5rem 2rem;
+    background-color: #fff;
+    box-shadow: 10px 40px 50px rgba(229, 233, 246,.4);
+}
+
+.service-section--items .item img {
+    object-fit: contain;
+}
+
+.service-section--items .item h3 {
+    font-weight: 700;
+    margin:1.7rem 0 0.6rem;
+}
+
+.service-section--items .item p {
+    font-size:0.95rem;
+    line-height:1.4rem;
+    font-weight:400;
+    color:var(--subtitle-color);
+}
+
+#back-image{
+    position:absolute;
+    left:-25%;
+    z-index:-99;
+    top:-6%;
+}
+
+#pattern-image{
+    position:absolute;
+    right:-6%;
+    z-index:-99;
+    top:40%;
+}
+
+.more-button {
+    text-align: center;
+    margin-top:4rem;
+}
+
+@media screen and (max-width:900px) {
+    .service-section {
+        padding:0 2rem 7rem;
+    }
+
+    .service-section--items {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .service-section {
+        max-width:100%;
+        padding:0 2rem 4rem;
+    }
+
+    .service-section--header {
+        width:100%;
+ 
+    }
+
+    .service-section--items {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width:520px) {
+    .service-section--header {
+        text-align: left;
+    }
+
+    .service-section--header h3{
+        font-size:1.4rem;
+        margin:0;
+    }
+
+    .service-section--header h3::after {
+        left:0;
+        transform: translateX(0);
+    }
+
+}
