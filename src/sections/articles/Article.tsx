@@ -13,7 +13,7 @@ const Article = () => {
             </div>
             <div className='article-section--items'>
                 {articles.map((item:any,idx:number) => (
-                     <div className='item'>
+                     <div key={idx} className='item'>
                         <img src={item.image} alt={item.title}/>
                         <div className='item-description'>
                             <h4>{item.title}</h4>
