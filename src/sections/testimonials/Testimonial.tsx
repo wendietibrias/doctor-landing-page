@@ -62,7 +62,9 @@ const Testimonial = () => {
             </button>
             <div className='bullets'>
                 {testimonials.map((item:any,idx:number)=>(
-                    <div  key={idx} className={`bullet-item ${currentIndex == idx ? 'active' :''}`}></div>
+                    <div  key={idx} className={`bullet-item  ${currentIndex == idx ? 'active' :''}`}>
+                      {item && item.name && ""}
+                    </div>
                 ))}
             </div>
             <button
